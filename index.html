@@ -68,6 +68,11 @@
                         <img src="assets/images/Asset+5@4x.png" alt="Chad Rudy Logo">
                     </a>
                 </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -199,7 +204,7 @@
                 <div class="contact-details">
                     <p><i class="fas fa-phone-alt"></i> <a href="tel:9723772850">972-377-2850</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:Chad@TheRetirementPath.com">Chad@TheRetirementPath.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/9Cn4zjrRH352" target="_blank">9300 John Hickman Pkwy, Suite 504 Frisco, TX 75035</a></p>
+                    <p class="address-line"><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/9Cn4zjrRH352" target="_blank">9300 John Hickman Pkwy, Suite 504<br>Frisco, TX 75035</a></p>
                 </div>
                 
                 <div class="contact-cta">
@@ -223,6 +228,25 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links li a');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('is-active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

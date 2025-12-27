@@ -73,6 +73,10 @@ nav {
     letter-spacing: 1px;
 }
 
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+}
+
 /* Hero Section */
 #home {
     background-color: var(--primary-color);
@@ -265,9 +269,15 @@ h2.section-title::after {
     gap: 10px;
 }
 
+.contact-details p.address-line {
+    align-items: flex-start; /* Align icon to top for multi-line address */
+    text-align: left; /* Ensure address text aligns nicely */
+}
+
 .contact-details i {
     color: var(--accent-color);
     width: 20px;
+    margin-top: 4px; /* Slight adjustment for top alignment */
 }
 
 .contact-cta {
@@ -331,20 +341,53 @@ footer a:hover {
 /* Responsive */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        /* flex-direction: column;  <-- Removed this to keep logo and burger side-by-side */
         padding-bottom: 1rem;
+        position: relative; /* For absolute positioning of menu if needed */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    /* Hamburger Animation */
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
 
     .nav-links {
-        display: flex;
+        display: none; /* Hidden by default on mobile */
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
         width: 100%;
+        margin-top: 20px;
+        background-color: var(--white);
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
         margin-left: 0;
     }
     
