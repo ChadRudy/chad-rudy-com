@@ -77,17 +77,37 @@ nav {
 #home {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 100px 0;
-    text-align: center;
-    background-image: url('../images/Frame+3612.png'); /* Assuming this is a BG */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+    padding: 80px 0;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center image in its half */
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 #home h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 #home h2 {
@@ -101,6 +121,18 @@ nav {
     font-size: 1.2rem;
     font-style: italic;
     color: var(--accent-color);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home-image {
+        margin-top: 30px;
+    }
 }
 
 /* Sections General */
