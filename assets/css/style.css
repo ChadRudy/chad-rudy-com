@@ -272,6 +272,7 @@ h2.section-title::after {
 
 .contact-details p.address-line {
     text-align: center;
+    align-items: flex-start;
 }
 
 .contact-details i {
