@@ -246,10 +246,40 @@ h2.section-title::after {
 .contact-info {
     text-align: center;
     font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.contact-info p {
+.contact-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.contact-details p {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    color: var(--accent-color);
+    width: 20px;
+}
+
+.contact-cta {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 10px;
 }
 
 .btn {
