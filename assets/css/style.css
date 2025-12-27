@@ -271,8 +271,7 @@ h2.section-title::after {
 }
 
 .contact-details p.address-line {
-    align-items: flex-start; /* Align icon to top for multi-line address */
-    text-align: left; /* Ensure address text aligns nicely */
+    text-align: center;
 }
 
 .contact-details i {
