@@ -1,0 +1,19 @@
+# General
+.DS_Store
+.env
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv
+env/
+venv/
+
+# VS Code
+.vscode/
