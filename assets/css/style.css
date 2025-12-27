@@ -203,7 +203,8 @@ h2.section-title::after {
 }
 
 .edu-card {
-    background: var(--white);
+    background: var(--primary-color);
+    color: var(--white);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -211,7 +212,7 @@ h2.section-title::after {
 }
 
 .edu-card h3 {
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 10px;
 }
 
