@@ -345,6 +345,7 @@ footer a:hover {
         /* flex-direction: column;  <-- Removed this to keep logo and burger side-by-side */
         padding-bottom: 1rem;
         position: relative; /* For absolute positioning of menu if needed */
+        flex-wrap: wrap;
     }
 
     .menu-toggle {
