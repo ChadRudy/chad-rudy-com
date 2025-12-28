@@ -378,6 +378,7 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        flex-basis: 100%; /* Ensure it breaks to a new line */
         margin-top: 20px;
         background-color: var(--white);
         border-top: 1px solid #eee;
